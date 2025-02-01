@@ -1,16 +1,39 @@
 import { useState } from "react";
+import emailjs from "emailjs-com";
 
 const Feedback = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [statusMessage, setStatusMessage] = useState<string>("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Feedback Submitted", { name, email, message });
-    setName("");
-    setEmail("");
-    setMessage("");
+
+    const templateParams = {
+      name: name,
+      email: email,
+      message: message,
+    };
+
+    // Send the email via EmailJS
+    emailjs
+      .send("your_service_id", "your_template_id", templateParams, "your_user_id")
+      .then(
+        (response) => {
+          console.log("Feedback Submitted", response);
+          setStatusMessage("Your feedback has been successfully submitted. Thank you!");
+          setName("");
+          setEmail("");
+          setMessage("");
+        },
+        (error) => {
+          console.error("Error submitting feedback", error);
+          setStatusMessage(
+            "Feedback could not be submitted. Please try again later."
+          );
+        }
+      );
   };
 
   return (
@@ -19,7 +42,7 @@ const Feedback = () => {
       <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
         We value your feedback! Please share your thoughts with us.
       </p>
-      
+
       <form onSubmit={handleSubmit} className="mt-6 max-w-3xl mx-auto">
         <input
           type="text"
@@ -51,6 +74,13 @@ const Feedback = () => {
           Submit Feedback
         </button>
       </form>
+
+      {/* Status message */}
+      {statusMessage && (
+        <p className={`mt-4 text-lg ${statusMessage.includes("success") ? "text-green-600" : "text-red-600"}`}>
+          {statusMessage}
+        </p>
+      )}
     </section>
   );
 };
