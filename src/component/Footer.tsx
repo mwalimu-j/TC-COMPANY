@@ -54,7 +54,7 @@ const Footer = () => {
 						<a
 							href="https://wa.me/0700598317"
 							className="text-blue-400 hover:underline">
-							0700598317
+							+254700598317
 						</a>
 					</p>
 					<p>
