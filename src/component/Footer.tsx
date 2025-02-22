@@ -50,19 +50,19 @@ const Footer = () => {
 					<h2 className="text-lg font-semibold mb-2">Contact Us</h2>
 					<hr />
 					<p>
-						WhatsApp:{" "}
+						WhatsApp: {" "}
 						<a
-							href="https://wa.me/0700598317"
+							href="https://wa.me/+254700598317"
 							className="text-blue-400 hover:underline">
-							0700598317
+							+254700598317
 						</a>
 					</p>
 					<p>
-						Email:{" "}
+						Email: {" "}
 						<a
-							href="mailto:mwalimujoshuakimanzi46@gmail.com"
+							href="mailto:webappgraphicdev1@gmail.com"
 							className="text-blue-400 hover:underline">
-							mwalimujoshuakimanzi46@gmail.com
+							webappgraphicdev1@gmail.com
 						</a>
 					</p>
 				</div>
@@ -74,22 +74,30 @@ const Footer = () => {
 
 					<div className="flex justify-center md:justify-start space-x-4">
 						<a
-							href="#"
+							href="https://twitter.com"
+							target="_blank"
+							rel="noopener noreferrer"
 							className="text-xl hover:text-blue-400">
 							<FaTwitter />
 						</a>
 						<a
-							href="#"
+							href="https://facebook.com"
+							target="_blank"
+							rel="noopener noreferrer"
 							className="text-xl hover:text-blue-400">
 							<FaFacebookF />
 						</a>
 						<a
-							href="#"
+							href="https://instagram.com"
+							target="_blank"
+							rel="noopener noreferrer"
 							className="text-xl hover:text-blue-400">
 							<FaInstagram />
 						</a>
 						<a
-							href="#"
+							href="https://telegram.org"
+							target="_blank"
+							rel="noopener noreferrer"
 							className="text-xl hover:text-blue-400">
 							<FaTelegramPlane />
 						</a>

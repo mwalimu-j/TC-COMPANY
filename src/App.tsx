@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom"; // No need to import Router here
+import { Routes, Route } from "react-router-dom"; 
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
 import Home from "./pages/Home";
@@ -6,7 +6,8 @@ import Services from "./pages/Services";
 import Contacts from "./pages/Contacts";
 import About from "./pages/About";
 import Feedback from "./pages/Feedback";
-
+import ExploreCost from "./pages/ExploreCost"; // ✅ Import ExploreCost
+import ExploreMore from "./pages/ExploreMore";
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -21,6 +22,9 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/about" element={<About />} />
           <Route path="/feedback" element={<Feedback />} />
+          <Route path="/explore-cost" element={<ExploreCost />} /> {/* ✅ Add ExploreCost route */}
+          <Route path="/explore-more" element={<ExploreMore />} />
+
         </Routes>
       </main>
 
