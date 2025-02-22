@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="bg-black text-white fixed w-full top-0 left-0 shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-        <Link to="/" className="text-2xl font-bold">Terrazzo constuction company</Link>
+        <Link to="/" className="text-2xl font-bold">Terrazzo company</Link>
         
         {/* Mobile Menu Button */}
         <button className="md:hidden" onClick={toggleMenu}>
